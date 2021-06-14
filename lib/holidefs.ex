@@ -32,6 +32,7 @@ defmodule Holidefs do
     hu: "Hungary",
     ie: "Ireland",
     it: "Italy",
+    jp: "Japan",
     my: "Malaysia",
     mx: "Mexico",
     nl: "Netherlands",
