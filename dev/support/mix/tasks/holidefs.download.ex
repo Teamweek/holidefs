@@ -31,7 +31,8 @@ defmodule Mix.Tasks.Holidefs.Download do
   @renamed_locales %{
     co: :es_co,
     rs: :rs_la,
-    be: :be_nl
+    be: :be_nl,
+    fed: :federal_reserve
   }
 
   @doc false
@@ -88,6 +89,8 @@ defmodule Mix.Tasks.Holidefs.Download do
   end
 
   defp download(code, path) do
+    IO.inspect("#{@endpoint}/#{renamed_locale(code)}.yaml")
+    IO.inspect(path)
     case Download.from("#{@endpoint}/#{renamed_locale(code)}.yaml", path: path) do
       {:ok, downloaded_path} ->
         if renamed_locale?(code) do
